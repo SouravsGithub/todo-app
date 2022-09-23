@@ -30,3 +30,14 @@ todoButton.addEventListener("click", (event) => {
   // Clear todo input value
   todoInput.value = "";
 });
+
+todoList.addEventListener("click", (event) => {
+  // Delete Todo
+  if (event.target.classList[0] === "trash-btn") {
+    event.target.parentElement.remove();
+  }
+  // Check Mark Todo
+  if (event.target.classList[0] === "complete-btn") {
+    event.target.parentElement.classList.toggle("completed");
+  }
+});
